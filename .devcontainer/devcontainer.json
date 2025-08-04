@@ -1,0 +1,26 @@
+// devcontainer.json for Python and GitHub CLI development
+{
+  "name": "Neural Networks using Pytorch",
+  // "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python3"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance",
+        "GitHub.copilot",
+        "GitHub.vscode-pull-request-github"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt"
+}

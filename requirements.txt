@@ -1,0 +1,8 @@
+# vscode jupyter requirements
+ipykernel
+#
+numpy
+torch
+torchvision
+#
+matplotlib
